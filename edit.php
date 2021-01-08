@@ -1,12 +1,15 @@
 <?php
 // * 下記を追加
 // 1. ファイルの読み込み
-
-
+    require_once('Models/Task.php');
+    require_once('function.php');
 // 2. データの受け取り
-
+    $id = $_GET['id'];
 
 // 3. DBへのデータ保存
+// インスタンス化とメソッドの呼び出しを一行に纏めると以下にのようになる。
+    $task = (new Task())->findById($id);
+
 
 
 ?>
@@ -34,7 +37,7 @@
         <div class="row mt-4 px-4">
             <div class="col-12">
                 <form action="update.php" method="post">
-                    <div class="form-group">
+                <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" name="title" id="title" value="<?= $task['title']; ?>">
                     </div>
