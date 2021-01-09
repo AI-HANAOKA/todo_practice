@@ -1,5 +1,5 @@
 <?php
-
+// updata.phpが記入されていたため、EDIT画面にて[title][contents]のデータが表示されなかった。１３行目でエラーが出ていた為
 // ファイルの読み込み
 require_once('Models/Task.php');
 
